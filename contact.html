@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/normolize.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css.map">
+</head>
+<body>
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Верхняя навигация и заголовок -->
+            <header class="contacts-header">
+                <nav class="breadcrumbs">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__current">Контактная информация</span>
+                </nav>
+                <h1 class="contacts-header__title">Контакты</h1>
+            </header>
+
+            <!-- Двухколоночный контент -->
+            <div class="contacts-layout">
+                
+                <!-- ЛЕВАЯ КОЛОНКА: Данные + Форма -->
+                <div class="contacts-layout__left">
+                    <h2 class="contacts-company-title">ООО "АС Техник"</h2>
+                    
+                    <!-- Список контактов -->
+                    <div class="contacts-info-list">
+                        <div class="contacts-info-list__row">
+                            <div class="contacts-info-list__label">📍 Адрес</div>
+                            <div class="contacts-info-list__value">141701, Россия, Московская Область, г. Долгопрудный, Лихачевский проезд, д. 6 стр.1, офис 614</div>
+                        </div>
+                        <div class="contacts-info-list__row">
+                            <div class="contacts-info-list__label">📞 Телефон</div>
+                            <div class="contacts-info-list__value"><a href="tel:+74956437328">+7 (495) 643-73-28</a></div>
+                        </div>
+                        <div class="contacts-info-list__row">
+                            <div class="contacts-info-list__label">✉️ E-mail</div>
+                            <div class="contacts-info-list__value">
+                                <a href="mailto:info@astehnik.ru">info@astehnik.ru</a>, 
+                                <a href="mailto:zakaz@astehnik.ru">zakaz@astehnik.ru</a>
+                            </div>
+                        </div>
+                        <div class="contacts-info-list__row">
+                            <div class="contacts-info-list__label">🕒 Режим работы</div>
+                            <div class="contacts-info-list__value">Пн. – Пт.: с 9:00 до 17:00</div>
+                        </div>
+                    </div>
+
+                    <!-- Форма обратной связи -->
+                    <section class="contacts-form-section">
+                        <h3 class="contacts-form-section__title">Написать нам</h3>
+                        
+                        <form class="contacts-page-form">
+                            <div class="contacts-page-form__group">
+                                <label class="contacts-page-form__label" for="c-name">Ваше имя</label>
+                                <input class="contacts-page-form__input" type="text" id="c-name" required>
+                            </div>
+                            
+                            <div class="contacts-page-form__group">
+                                <label class="contacts-page-form__label" for="c-phone">Ваш телефон</label>
+                                <input class="contacts-page-form__input" type="tel" id="c-phone" required>
+                            </div>
+                            
+                            <div class="contacts-page-form__group">
+                                <label class="contacts-page-form__label" for="c-email">Ваш E-mail</label>
+                                <input class="contacts-page-form__input" type="email" id="c-email" required>
+                            </div>
+                            
+                            <div class="contacts-page-form__group">
+                                <label class="contacts-page-form__label" for="c-msg">Сообщение</label>
+                                <textarea class="contacts-page-form__input contacts-page-form__input--textarea" id="c-msg" required></textarea>
+                            </div>
+                            
+                            <div class="contacts-page-form__privacy">
+                                <label class="contacts-page-form__privacy-label">
+                                    <input type="checkbox" required> 
+                                    Я согласен на <a href="#">обработку персональных данных</a>
+                                </label>
+                            </div>
+                            
+                            <div class="contacts-page-form__buttons">
+                                <button class="button-action button-action--submit" type="submit">✓ Отправить</button>
+                                <button class="button-action button-action--close" type="button" onclick="window.location.href='index.html'">× Закрыть</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <!-- ПРАВАЯ КОЛОНКА: Интерактивная карта -->
+                <div class="contacts-layout__right">
+                    <div class="contacts-map-box">
+                        <iframe class="contacts-map-box__iframe" src="https://yandex.ru/map-widget/v1/?ll=37.513521%2C55.922212&z=16&pt=37.513521%2C55.922212%2Cpm2blm" allowfullscreen="true"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="src/javascript/contact.js"></script>
+</body>
+</html>

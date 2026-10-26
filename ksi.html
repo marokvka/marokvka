@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/normolize.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css.map">
+</head>
+<body class="page">
+
+    <header class="header">
+        <div class="header__top">
+            <div class="container header__top-container">
+                <div class="header__meta">
+                    <a href="aboutus.html" class="header__meta-link">О компании 
+                    </a>
+                    <a href="feedback.html" class="header__meta-link">Обратная связь</a>
+                    <a href="contact.html" class="header__meta-link">Контактная информация</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header__main">
+            <div class="container header__main-container">
+                <a href="" class="logo">
+                    <img src="src/icon/astecehnik.png" alt="АС Техник" class="logo__img">
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link" data-tab="ceccato">ТОВАРЫ CECCATO</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="ksi.html" class="nav__link nav__link--active" data-tab="ksi">ТОВАРЫ KSI</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="parts.html" class="nav__link" data-tab="parts">ЗАПАСНЫЕ ЧАСТИ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="screwblocks.html" class="nav__link" data-tab="blocks">ВИНТОВЫЕ БЛОКИ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    </main>
+    <main class="main-content">
+        <section class="ksi-hero">
+            <div class="container ksi-hero__container">
+                <div class="ksi-hero__content">
+                    <img src="src/img/Group7.png" alt="KSI" class="ksi-hero__brand-logo">
+                    <h1 class="ksi-hero__title">Оборудование для подготовки сжатого воздуха KSI</h1>
+                    <a href="#" class="ksi-hero__btn">
+                        Весь Ассортимент KSI
+                        <span class="ksi-hero__btn-icon"></span>
+                    </a>
+                </div>
+                <div class="ksi-hero__image-box">
+                    <img src="src/img/Rectangle19.png" alt="Осушитель воздуха KSI" class="ksi-hero__img">
+                </div>
+            </div>
+        </section>
+
+        <section class="products-promo">
+            <div class="container products-promo__container">
+                <div class="products-promo__content">
+                    <h2 class="products-promo__title">Масловлагоотделители KONTREC®SEP</h2>
+                    <div class="products-promo__text">
+                        <p>Масловлагоотделитель – гарантия безопасной и экономичной подготовки маслозагрязнённого конденсата.</p>
+                        <p>KONTREC®SEP – безопасное и экономичное решение для подготовки конденсата к сливу в канализационные сети.</p>
+                    </div>
+                    <!-- ПЕРЕДЕЛАНО: Ссылка теперь ведет на order.html и передает название товара -->
+                    <a href="order.html?product=Масловлагоотделители KONTREC SEP" class="products-promo__btn">
+                        Перейти
+                        <span class="products-promo__btn-plus">+</span>
+                    </a>
+                </div>
+                <div class="products-promo__image-box">
+                    <img src="src/img/ALLE-KON-S.png" alt="Масловлагоотделители KONTREC SEP" class="products-promo__img">
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <div class="logo logo--footer">
+                    <img src="src/icon/astecehnik.png" alt="АС Техник" class="logo__img">
+                </div>
+                <p class="footer__copyright">© 2025 ООО "АС Техник"</p>
+            </div>  
+            <div class="footer__menu">
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Товары</a></li>
+                    <li><a href="#" class="footer__link">Вспомогательное оборудование</a></li>
+                    <li><a href="#" class="footer__link">Поршневые компрессоры</a></li>
+                    <li><a href="#" class="footer__link">Винтовые компрессоры</a></li>
+                    <li><a href="#" class="footer__link">Винтовые Блоки</a></li>
+                    <li><a href="#" class="footer__link">CECCATO</a></li>
+                    <li><a href="#" class="footer__link">KSI</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/ksi.js"></script>
+</body>
+</html>

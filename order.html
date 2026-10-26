@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа — АС Техник</title>
+    <link rel="stylesheet" href="src/css/normolize.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body class="page">
+
+    <main class="main-content">
+        <section class="info-page">
+            <div class="container">
+                
+               
+                <nav class="breadcrumbs">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__current">Оформление заказа</span>
+                </nav>
+
+                <div class="info-page__wrapper info-page__wrapper--narrow">
+                    <h1 class="info-page__title">Оформление заказа</h1>
+                    <p class="info-page__subtitle">Заполните форму, и наш менеджер свяжется с вами для подтверждения заказа оборудования.</p>
+                    
+                    <form class="feedback-page-form" id="purchase-form">
+                       
+                        <div class="feedback-page-form__group">
+                            <label class="feedback-page-form__label" for="order-product">Выбранное оборудование</label>
+                            <input class="feedback-page-form__input feedback-page-form__input--readonly" type="text" id="order-product" readonly>
+                        </div>
+
+                        <div class="feedback-page-form__group">
+                            <label class="feedback-page-form__label" for="order-name">Ваше имя *</label>
+                            <input class="feedback-page-form__input" type="text" id="order-name" required placeholder="Иван Иванов">
+                        </div>
+                        
+                        <div class="feedback-page-form__group">
+                            <label class="feedback-page-form__label" for="order-phone">Номер телефона *</label>
+                            <input class="feedback-page-form__input" type="tel" id="order-phone" required placeholder="+7 (999) 000-00-00">
+                        </div>
+                        
+                        <div class="feedback-page-form__group">
+                            <label class="feedback-page-form__label" for="order-message">Комментарий к заказу</label>
+                            <textarea class="feedback-page-form__input feedback-page-form__input--textarea" id="order-message" placeholder="Например: требования к доставке, комплектации или напряжению сети"></textarea>
+                        </div>
+                        
+                        <button class="button button--primary feedback-page-form__btn" type="submit">Подтвердить заказ</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="src/javascript/order.js"></script>
+</body>
+</html>

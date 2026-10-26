@@ -1,0 +1,1479 @@
+
+// Переменные (Цвета, Шрифты)
+$color-primary-blue: #1e6fd9
+$color-dark-blue: #0b4ca3
+$color-light-blue: #b9cbe7
+$color-bg-gray: #fcfcfc
+$color-white: #ffffff
+$color-text-main: #333333
+$font-main: 'Arial', sans-serif
+
+// Миксины
+=flex-center
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+// Базовые сбросы
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  font-family: $font-main
+  color: $color-text-main
+  background-color: $color-bg-gray
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 15px
+
+// ХЕДЕР
+.header
+  &__top
+    background-color: #fff
+    border-bottom: 1px solid #eee
+    padding: 8px 0
+  
+  &__top-container
+    display: flex
+    justify-content: flex-end
+
+  &__meta
+    display: flex
+    gap: 20px
+
+  &__meta-link
+    font-size: 12px
+    color: #666
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+  &__main
+    background-color: #fff
+    padding: 20px 0
+    border-bottom: 3px solid $color-primary-blue
+
+  &__main-container
+    +flex-center
+
+// Навигация
+.nav
+  &__list
+    display: flex
+    align-items: center
+    list-style: none
+    gap: 10px
+    margin: 0
+    padding: 0
+
+  &__link
+    background: none
+    border: none
+    padding: 0
+    margin: 0
+    font-family: inherit
+    cursor: pointer
+    text-decoration: none
+    font-size: 14px
+    font-weight: 700
+    color: #1e6fd9
+    text-transform: uppercase
+    padding: 10px 20px 
+    display: inline-block
+    transition: all 0.2s ease
+    border-radius: 2px 
+    &:hover
+        color: (#1e6fd9, 10%)
+    &--active
+      background-color: #1e6fd9 !important
+      color: #ffffff !important
+      cursor: default
+    
+// ПРОМО СЕКЦИЯ
+.promo
+  padding: 60px 0
+  background-color: #fff
+  &__container
+    display: flex
+    align-items: center
+    gap: 40px
+
+  &__info
+    flex: 1
+
+  &__brand-logo
+    max-height: 100px
+    margin-bottom: 160px
+
+  &__title
+    font-size: 36px
+    color: $color-dark-blue
+    margin-bottom: 30px
+
+  &__image-wrapper
+    flex: 1
+    text-align: right
+    img
+      max-width: 100%
+      height: auto
+
+// КНОПКИ
+.button
+  border: none
+  display: inline-flex
+  align-items: center
+  justify-content: space-between
+  background-color: $color-primary-blue
+  color: $color-white
+  text-decoration: none
+  font-weight: 700
+  font-size: 15px
+  padding: 15px 25px
+  border-radius: 3px
+  width: 290px
+  transition: background-color 0.2s
+  &--primary
+    background-color: $color-primary-blue
+    color: $color-white
+    gap: 15px
+  &:hover
+      background-color: ($color-primary-blue, 8%)
+    
+
+  &--blue-bg
+    background-color: $color-primary-blue
+    color: $color-white
+    min-width: 140px
+
+  &--white-bg
+    background-color: $color-white
+    color: $color-primary-blue
+    min-width: 140px
+
+// СЕКЦИЯ ТАБОВ И КАТАЛОГА
+.feedback-page-form__input
+  // Ваши старые стили инпутов сохраняются...
+  
+  &--readonly
+    background-color: #f7f9fc
+    border-color: #d1d8e0
+    color: #1e6fd9
+    font-weight: 600
+    cursor: not-allowed
+
+
+.catalog-section
+  background-color: $color-light-blue
+  padding: 40px 0
+
+.tabs
+  display: flex
+  background-color: $color-white
+  display: inline-flex
+  border-radius: 4px
+  overflow: hidden
+  margin-bottom: 30px
+
+  &__btn
+    padding: 12px 20px
+    border: none
+    background: transparent
+    font-size: 14px
+    color: $color-primary-blue
+    cursor: pointer
+    font-weight: bold
+
+    &--active
+      background-color: $color-primary-blue
+      color: $color-white
+
+// Карточка каталога во вкладке
+.catalog-card
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 30px
+
+  &__info
+    flex: 1
+    color: $color-dark-blue
+
+  &__title
+    font-size: 28px
+    margin-bottom: 20px
+
+  &__text
+    font-size: 16px
+    line-height: 1.5
+    margin-bottom: 35px
+
+  &__image-wrapper
+    flex: 1
+    img
+      max-width: 100%
+
+// Сетка для дополнительных решений
+.grid-two-columns
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 30px
+  padding: 50px 0
+
+// Стили карточки по макету
+.solution-card
+  background-color: $color-primary-blue
+  color: $color-white
+  padding: 40px
+  border-radius: 4px // если нужен легкий скруглитель по дизайну
+  display: flex
+  justify-content: space-between
+  align-items: center // выравнивает контент и белую плашку по центру высоты
+  gap: 25px
+
+  &__info
+    flex: 1
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__title
+    font-size: 24px
+    font-weight: bold
+    margin-bottom: 20px
+    line-height: 1.2
+
+  &__text
+    font-size: 14px
+    line-height: 1.5
+    margin-bottom: 40px
+    padding-right: 10px // небольшой отступ, чтобы текст не прижимался к картинке
+
+  // Белая рамочка под картинку из макета
+  &__image-wrapper
+    flex: 0 0 220px // фиксированная ширина белого бокса
+    height: 140px // фиксированная высота белого бокса
+    background-color: $color-white
+    border-radius: 6px
+    padding: 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+
+ 
+  &__img
+    max-width: 100%
+    max-height: 100%
+    object-fit: contain
+
+// ФУТЕР
+.footer
+  background-color: $color-primary-blue
+  color: $color-white
+  padding: 40px 0
+  border-top: 1px solid rgba(255, 255, 255, 0.2)
+
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &__copyright
+    margin-top: 15px
+    font-size: 12px
+    opacity: 0.8
+
+  &__list
+    list-style: none
+    display: flex
+    flex-direction: column
+    gap: 8px
+    text-align: right
+
+  &__link
+    color: $color-white
+    text-decoration: none
+    font-size: 13px
+    &:hover
+      text-decoration: underline
+
+// Логика переключения табов
+.tab-panel
+  display: none !important
+  
+  &--active
+    display: block !important
+    animation: fadeIn 0.3s ease-in-out
+
+@keyframes fadeIn
+  from
+    opacity: 0
+    transform: translateY(10px)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+@media (max-width: 992px)
+  .grid-two-columns
+    grid-template-columns: 1fr
+    padding: 30px 0
+
+  .solution-card
+    &__text
+      min-height: auto
+@media (max-width: 576px)
+  .solution-card
+    flex-direction: column 
+    align-items: stretch
+    padding: 25px
+    
+    &__text
+      margin-bottom: 25px
+
+    &__image-wrapper
+      flex: none
+      width: 100% 
+      height: 160px
+
+
+@media (max-width: 768px)
+  .header
+    &__top-container
+      justify-content: center
+
+    &__main-container
+      flex-direction: column
+      gap: 20px
+
+  .nav
+    width: 100%
+    &__list
+      flex-direction: column
+      width: 100%
+      gap: 5px
+    &__link
+      display: block
+      text-align: center
+
+  .promo
+    padding: 40px 0
+    &__container
+      flex-direction: column-reverse
+      text-align: center
+    &__image-wrapper
+      text-align: center
+      img
+        max-height: 300px
+    &__brand-logo
+        margin-bottom: 15px
+
+  .tabs
+    display: flex
+    flex-direction: column
+    width: 100%
+    &__btn
+      border-bottom: 1px solid #eee
+      text-align: center
+
+  .catalog-card
+    flex-direction: column
+    text-align: center
+
+  .footer
+    padding: 40px 0
+    &__container
+      flex-direction: column
+      align-items: center
+      gap: 30px
+      text-align: center
+    &__brand
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__list
+      text-align: center
+
+@media (max-width: 576px)
+  .solution-card
+    flex-direction: column-reverse
+    padding: 25px
+    align-items: stretch
+    &__image-wrapper
+      height: 150px
+
+@media (max-width: 480px)
+  .header
+    &__meta
+      flex-direction: column
+      align-items: center
+      gap: 10px
+
+  .promo
+    &__title
+      font-size: 28px
+
+
+
+// УНИВЕРСАЛЬНАЯ СЕКЦИЯ СТРАНИЦЫ
+.info-page
+  padding: 40px 0
+  background-color: #fff
+
+  &__wrapper
+    max-width: 800px // Текстовые страницы лучше сужать, чтобы их было удобно читать
+    margin: 0 auto
+
+  &__title
+    font-size: 32px
+    color: $color-dark-blue
+    margin-bottom: 30px
+    font-weight: bold
+
+// ХЛЕБНЫЕ КРОШКИ
+.breadcrumbs
+  display: flex
+  align-items: center
+  gap: 8px
+  margin-bottom: 25px
+  font-size: 13px
+
+  &__link
+    color: $color-primary-blue
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  &__next
+    color: $color-primary-blue
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  &__separator
+    color: #999
+
+  &__current
+    color: #666
+
+
+//СТИЛИ ДЛЯ ОБРАТНОЙ СВЯЗИ
+
+.info-page__wrapper--narrow
+  max-width: 550px
+  background-color: #fff
+  border: 1px solid #eef2f7
+  padding: 40px
+  border-radius: 6px
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03)
+
+.info-page__subtitle
+  font-size: 15px
+  color: #666
+  margin-bottom: 30px
+  line-height: 1.4
+
+// Стили формы на отдельной странице
+.feedback-page-form
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+  &__group
+    display: flex
+    flex-direction: column
+    gap: 6px
+
+  &__label
+    font-size: 13px
+    font-weight: bold
+    color: $color-dark-blue
+
+  &__input
+    width: 100%
+    padding: 12px 15px
+    border: 1px solid #dcdcdc
+    border-radius: 4px
+    font-size: 15px
+    font-family: inherit
+    transition: border-color 0.2s
+    
+    &:focus
+      outline: none
+      border-color: $color-primary-blue
+
+    &--textarea
+      resize: vertical
+      min-height: 110px
+
+  &__btn
+    width: 100%
+    justify-content: center
+    margin-top: 10px
+
+@media (max-width: 576px)
+  .info-page__wrapper--narrow
+    padding: 20px 10px
+    border: none
+    box-shadow: none
+
+
+//О КОМПАНИИ
+// 1. Промо-шапка страницы
+.about-hero
+  background: linear-gradient(135deg, #f5f8fd 0%, #eef3fb 100%)
+  padding: 50px 0 60px
+  border-bottom: 1px solid #e2eaf5
+
+  &__title
+    font-size: 38px
+    color: $color-dark-blue
+    font-weight: bold
+    margin-top: 15px
+    margin-bottom: 15px
+
+  &__subtitle
+    font-size: 18px
+    color: #555
+    max-width: 700px
+    line-height: 1.5
+
+// 2. Блок инфографики (Цифры)
+.about-stats
+  margin-top: -30px // Наползание на предыдущую секцию для эффекта многослойности
+  padding-bottom: 50px
+
+.stats-grid
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 20px
+
+.stats-card
+  background-color: $color-white
+  padding: 30px 20px
+  border-radius: 6px
+  text-align: center
+  box-shadow: 0 10px 25px rgba(30, 111, 217, 0.08)
+  border: 1px solid #eef2f7
+  transition: transform 0.3s ease
+
+  &:hover
+    transform: translateY(-5px)
+
+  &__number
+    display: block
+    font-size: 36px
+    font-weight: bold
+    color: $color-primary-blue
+    margin-bottom: 10px
+
+  &__label
+    font-size: 13px
+    color: #666
+    line-height: 1.3
+    font-weight: bold
+
+// 3. Основной текст
+.about-content
+  padding: 40px 0 70px
+  
+  &__wrapper
+    max-width: 850px
+    margin: 0 auto
+
+// Кастомная красивая цитата
+.about-quote
+  margin: 40px 0
+  padding: 25px 30px
+  border-left: 5px solid $color-primary-blue
+  background-color: #f8fba3 // Мягкий корпоративный жёлто-зеленый оттенок или нежно-синий:
+  background-color: #f4f8fe
+  border-radius: 0 6px 6px 0
+  font-size: 18px
+  font-style: italic
+  color: $color-dark-blue
+  line-height: 1.5
+
+// Красивый список преимуществ
+.about-benefits
+  list-style: none !important
+  padding-left: 0 !important
+  margin-top: 20px
+
+  li
+    position: relative
+    padding-left: 30px
+    margin-bottom: 15px
+    line-height: 1.5
+    
+    &::before
+      content: "✓"
+      position: absolute
+      left: 0
+      top: 0
+      color: $color-primary-blue
+      font-weight: bold
+      font-size: 18px
+
+
+//КОНТАКТНАЯ ИНФОРМАЦИЯ
+// Базовые настройки для хедера страницы
+.contacts-header
+  padding: 20px 0 10px
+  border-bottom: 1px solid #e0e0e0
+  margin-bottom: 30px
+
+  &__title
+    font-size: 32px
+    font-weight: 400
+    color: #333
+    margin-top: 5px
+
+// Главная сетка страницы
+.contacts-layout
+  display: grid
+  grid-template-columns: 1.1fr 1.3fr
+  gap: 50px
+  align-items: start
+  padding-bottom: 60px
+
+  &__left
+    display: flex
+    flex-direction: column
+
+.contacts-company-title
+  font-size: 24px
+  font-weight: 400
+  color: #222
+  margin-bottom: 20px
+
+// Стили таблицы-списка информации
+.contacts-info-list
+  display: flex
+  flex-direction: column
+  border-top: 1px solid #e0e0e0
+  margin-bottom: 40px
+
+  &__row
+    display: grid
+    grid-template-columns: 140px 1fr
+    padding: 12px 0
+    border-bottom: 1px solid #e0e0e0
+    font-size: 14px
+    line-height: 1.5
+    align-items: start
+
+  &__label
+    font-weight: bold
+    color: #000
+
+  &__value
+    color: #333
+    a
+      color: #1e6fd9
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+// Секция формы «Написать нам»
+.contacts-form-section
+  &__title
+    font-size: 24px
+    font-weight: 400
+    text-align: center
+    color: #222
+    margin-bottom: 30px
+
+.contacts-page-form
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+  &__group
+    display: flex
+    flex-direction: column
+    gap: 5px
+
+  &__label
+    font-size: 14px
+    font-weight: bold
+    color: #000
+
+  // Специфичные инпуты из макета (просто линии снизу)
+  &__input
+    width: 100%
+    border: none
+    border-bottom: 1px solid #b0b0b0
+    padding: 8px 0
+    font-size: 15px
+    font-family: inherit
+    background: transparent
+    border-radius: 0
+    
+    &:focus
+      outline: none
+      border-bottom-color: #1e6fd9
+
+    &--textarea
+      border: 1px solid #b0b0b0
+      min-height: 100px
+      padding: 10px
+      margin-top: 5px
+      resize: vertical
+
+  &__privacy
+    font-size: 14px
+    color: #333
+    margin-top: 5px
+    
+    input
+      margin-right: 5px
+      vertical-align: middle
+    
+    a
+      color: #2da1e7
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+  // Блок кнопок внизу
+  &__buttons
+    display: flex
+    gap: 15px
+    margin-top: 15px
+    border-top: 1px solid #e0e0e0
+    padding-top: 20px
+
+// Стили новых кнопок действий
+.button-action
+  padding: 10px 24px
+  border: 1px solid transparent
+  font-size: 14px
+  font-family: inherit
+  cursor: pointer
+  border-radius: 2px
+  transition: opacity 0.2s
+
+  &:hover
+    opacity: 0.9
+
+  &--submit
+    background-color: #2392cc
+    color: #fff
+    font-weight: bold
+
+  &--close
+    background-color: #f5f5f5
+    border-color: #d0d0d0
+    color: #333
+
+// Блок карты справа
+.contacts-map-box
+  width: 100%
+  height: 550px
+  border: 1px solid #e0e0e0
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+
+  &__iframe
+    width: 100%
+    height: 100%
+    border: none
+
+
+// ==========================================
+// МЕДИА-ЗАПРОСЫ (АДАПТИВ) В САМЫЙ НИЗ ФАЙЛА
+// ==========================================
+
+@media (max-width: 992px)
+  .contacts-layout
+    grid-template-columns: 1fr // На планшетах карта падает под форму
+    gap: 40px
+
+  .contacts-map-box
+    height: 400px
+
+@media (max-width: 576px)
+  .contacts-info-list
+    &__row
+      grid-template-columns: 1fr // На мобильных метки встают над значениями
+      gap: 4px
+      padding: 10px 0
+
+  .contacts-page-form
+    &__buttons
+      flex-direction: column
+      
+  .button-action
+    width: 100%
+    text-align: center
+
+
+//СТИЛИЗАЦИЯ KSI БЛОКА
+ // 1. ПЕРВЫЙ ЭКРАН (KSI HERO)
+.ksi-hero
+  padding: 60px 0
+  background-color: $color-white
+  font-family: $font-main
+
+  &__container
+    display: grid
+    grid-template-columns: 1.2fr 0.8fr
+    gap: 40px
+    align-items: center
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__brand-logo
+    max-height: 70px
+    margin-bottom: 25px
+    display: block
+
+  &__title
+    font-size: 42px
+    color: $color-dark-blue // Изменил на твой темно-синий
+    font-weight: 800
+    line-height: 1.2
+    margin-bottom: 40px
+
+  // Синяя прямоугольная кнопка "Весь Ассортимент KSI"
+  &__btn
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    background-color: $color-primary-blue // Твой основной синий
+    color: $color-white
+    text-decoration: none
+    font-weight: 700
+    font-size: 15px
+    padding: 15px 25px
+    border-radius: 3px
+    width: 290px  
+    transition: background-color 0.2s
+
+    &:hover
+      background-color: ($color-primary-blue, 8%)
+
+  // Иконка "гамбургер/меню" внутри кнопки
+  &__btn-icon
+    display: inline-block
+    width: 18px
+    height: 12px
+    border-top: 2px solid $color-white
+    border-bottom: 2px solid $color-white
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 2px
+      background-color: $color-white
+      top: 3px
+      left: 0
+
+  &__image-box
+    text-align: center
+
+  &__img
+    max-width: 100%
+    height: auto
+    object-fit: contain
+
+
+// 2. ВТОРОЙ ЭКРАН (МАСЛОВЛАГООТДЕЛИТЕЛИ KONTREC®SEP)
+.products-promo
+  // Используем твой нежно-синий ($color-light-blue) для плавного градиента в цвет макета
+  background: linear-gradient(to bottom, ($color-light-blue, 5%) 0%, $color-light-blue 100%)
+  padding: 80px 0
+  font-family: $font-main
+
+  &__container
+    display: grid
+    grid-template-columns: 1.2fr 0.8fr
+    gap: 40px
+    align-items: center
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__title
+    font-size: 38px
+    color: $color-dark-blue // Изменил на твой темно-синий
+    font-weight: 800
+    margin-bottom: 30px
+    line-height: 1.2
+
+  &__text
+    font-size: 16px
+    color: $color-text-main // Твой основной цвет текста
+    line-height: 1.6
+    margin-bottom: 40px
+    p
+      margin-bottom: 15px
+
+  // Округлая кнопка "Перейти +"
+  &__btn
+    display: inline-flex
+    align-items: center
+    gap: 35px
+    background-color: $color-primary-blue // Твой основной синий
+    color: $color-white
+    text-decoration: none
+    font-weight: 700
+    font-size: 16px
+    padding: 14px 35px
+    border-radius: 3px
+    transition: background-color 0.2s
+
+    &:hover
+      background-color: ($color-primary-blue, 8%)
+
+  &__btn-plus
+    font-size: 18px
+    font-weight: 400
+
+  &__image-box
+    text-align: center
+
+  &__img
+    max-width: 100%
+    height: auto
+
+
+// ==========================================
+// АДАПТИВ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+// ==========================================
+@media (max-width: 992px)
+  .ksi-hero__container, 
+  .products-promo__container
+    grid-template-columns: 1fr
+    gap: 30px
+    text-align: center
+  
+  .ksi-hero__content, 
+  .products-promo__content
+    align-items: center   
+
+//СТИЛИ ДЛЯ ЗАПАСНЫХ ЧАСТЕЙ
+.parts-hero
+  padding: 60px 0
+  background-color: $color-white
+  font-family: $font-main
+
+  &__container
+    display: grid
+    grid-template-columns: 1fr 1.2fr // Левая колонка чуть уже, правая с галереей чуть шире
+    gap: 50px
+    align-items: center
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__title
+    font-size: 42px
+    color: $color-dark-blue // Твой темно-синий цвет для главного заголовка
+    font-weight: 800
+    line-height: 1.2
+    margin-bottom: 30px
+    text-transform: none
+
+  &__text
+    font-size: 16px
+    color: $color-primary-blue // На макете этот текст именно ярко-синий
+    font-weight: 700
+    line-height: 1.5
+    margin-bottom: 50px
+    max-width: 380px // Чтобы текст красиво переносился как на скрине
+
+  // Синяя прямоугольная кнопка каталога
+  &__btn
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    background-color: $color-primary-blue
+    color: $color-white
+    text-decoration: none
+    font-weight: 700
+    font-size: 15px
+    line-height: 1.3
+    padding: 15px 20px
+    border-radius: 3px
+    width: 260px
+    border: 2px solid $color-primary-blue
+    transition: background-color 0.2s, border-color 0.2s
+
+    &:hover
+      background-color: ($color-primary-blue, 8%)
+      border-color: ($color-primary-blue, 8%)
+
+  // Иконка "гамбургер" (три полоски) внутри кнопки
+  &__btn-icon
+    display: inline-block
+    width: 18px
+    height: 12px
+    border-top: 2px solid $color-white
+    border-bottom: 2px solid $color-white
+    position: relative
+    margin-left: 15px
+    flex-shrink: 0
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 2px
+      background-color: $color-white
+      top: 3px
+      left: 0
+
+  
+  &__gallery
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 20px
+
+  &__img-wrapper
+    width: 100%
+    overflow: hidden
+    border-radius: 4px
+    background-color: $color-bg-gray
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05)
+
+  &__img
+    display: block
+    width: 100%
+    height: auto
+    object-fit: cover
+
+
+// ==========================================
+// АДАПТИВ ПОД МОБИЛЬНЫЕ УСТРОЙСТВА
+// ==========================================
+@media (max-width: 992px)
+  .parts-hero
+    padding: 40px 0
+    
+    &__container
+      grid-template-columns: 1fr 
+      gap: 40px
+      text-align: center
+
+    &__content
+      align-items: center 
+
+    &__text
+      max-width: 100%
+
+    &__gallery
+      gap: 15px
+
+//==============================================
+
+.blocks-hero
+  padding: 60px 0
+  background-color: $color-white
+  font-family: $font-main
+
+  &__container
+    display: grid
+    grid-template-columns: 1.1fr 1.3fr 
+    gap: 50px
+    align-items: center
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__title
+    font-size: 42px
+    color: $color-dark-blue 
+    font-weight: 800
+    line-height: 1.2
+    margin-bottom: 25px
+
+  &__text
+    font-size: 16px
+    color: $color-primary-blue 
+    font-weight: 700
+    line-height: 1.5
+    margin-bottom: 50px
+    max-width: 420px 
+ 
+  &__btn
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    background-color: $color-primary-blue
+    color: $color-white
+    text-decoration: none
+    font-weight: 700
+    font-size: 15px
+    line-height: 1.3
+    padding: 15px 20px
+    border-radius: 3px
+    width: 260px
+    border: 2px solid $color-primary-blue
+    box-shadow: 0 4px 12px rgba(30, 111, 217, 0.2)
+    transition: background-color 0.2s, border-color 0.2s
+
+    &:hover
+      background-color: ($color-primary-blue, 8%)
+      border-color: ($color-primary-blue, 8%)
+
+ 
+  &__btn-icon
+    display: inline-block
+    width: 18px
+    height: 12px
+    border-top: 2px solid $color-white
+    border-bottom: 2px solid $color-white
+    position: relative
+    margin-left: 15px
+    flex-shrink: 0
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 2px
+      background-color: $color-white
+      top: 3px
+      left: 0
+
+  &__image-box
+    text-align: center
+    width: 100%
+
+  &__img
+    display: block
+    max-width: 100%
+    height: auto
+    object-fit: contain
+
+// Мобильный адаптив
+@media (max-width: 992px)
+  .blocks-hero
+    padding: 40px 0
+    
+    &__container
+      grid-template-columns: 1fr 
+      gap: 40px
+      text-align: center
+
+    &__content
+      align-items: center 
+
+    &__text
+      max-width: 100%
+
+
+//СПИСОК ЗАЯВОК СТИЛИ
+  // Переменные
+$color-primary: #1e6fd9
+$color-primary-hover: #155cb4
+$color-text-main: #333333
+$color-text-muted: #666666
+$color-border: #e0e0e0
+$color-bg-card: #ffffff
+$color-danger: #dc3545
+
+
+.container
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 16px
+
+// Навигационная цепочка
+.breadcrumbs
+  display: flex
+  align-items: center
+  gap: 8px
+  margin-bottom: 24px
+  font-size: 0.9rem
+  overflow-x: auto
+  white-space: nowrap
+  -webkit-overflow-scrolling: touch
+  
+  &::-webkit-scrollbar
+    display: none
+
+// Шапка страницы
+.info-page
+  padding: 24px 0
+
+  &__title
+    font-size: 1.8rem
+    font-weight: 700
+    line-height: 1.2
+    margin-bottom: 8px
+    color: $color-text-main
+
+    @media (min-width: 768px)
+      font-size: 2.4rem
+
+  &__subtitle
+    font-size: 1rem
+    line-height: 1.4
+    color: $color-text-muted
+    margin-bottom: 24px
+
+// Сетка карточек
+.feedback-cards-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+  gap: 16px
+  margin-top: 24px
+  width: 100%
+
+  @media (min-width: 768px)
+    gap: 20px
+    margin-top: 32px
+
+// Карточка заявки
+.feedback-card
+  background-color: $color-bg-card
+  border: 1px solid $color-border
+  border-radius: 8px
+  padding: 16px
+  display: flex
+  flex-direction: column
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02)
+  transition: transform 0.2s ease, box-shadow 0.2s ease
+
+  @media (min-width: 480px)
+    padding: 24px
+
+  &:hover
+    @media (min-width: 1024px)
+      transform: translateY(-2px)
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05)
+
+  &__header
+    display: flex
+    flex-direction: column
+    gap: 4px
+    margin-bottom: 16px
+
+    @media (min-width: 414px)
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+
+  &__title
+    font-size: 1.15rem
+    font-weight: 600
+    color: $color-text-main
+    margin: 0
+    word-break: break-word
+
+  &__date
+    font-size: 0.8rem
+    color: $color-text-muted
+    white-space: nowrap
+
+  &__body
+    flex-grow: 1
+    margin-bottom: 16px
+
+  &__item
+    margin-bottom: 8px
+    font-size: 0.95rem
+    color: $color-text-main
+    line-height: 1.4
+    word-break: break-word
+
+    strong
+      font-weight: 600
+      color: $color-text-muted
+      display: block
+      margin-bottom: 2px
+
+      @media (min-width: 375px)
+        display: inline
+        margin-bottom: 0
+
+  &__message
+    margin-top: 12px
+    padding-top: 12px
+    border-top: 1px dashed $color-border
+    font-style: italic
+    color: $color-text-main, 10%
+    
+    strong
+      display: block
+      font-style: normal
+
+  &__actions
+    display: flex
+    justify-content: flex-end
+    margin-top: auto
+
+  &__delete-btn
+    background: transparent
+    border: 1px solid $color-border
+    color: $color-text-muted
+    padding: 8px 16px
+    font-size: 0.85rem
+    border-radius: 4px
+    cursor: pointer
+    width: 100%
+    transition: all 0.2s ease
+
+    @media (min-width: 414px)
+      width: auto
+
+    &:hover
+      background-color: $color-danger
+      border-color: $color-danger
+      color: #ffffff
+
+// Заглушка при отсутствии данных
+.no-data-msg
+  grid-column: 1 / -1
+  text-align: center
+  padding: 30px 16px
+  color: $color-text-muted
+  font-size: 1rem
+  border: 2px dashed $color-border
+  border-radius: 8px
+
+  @media (min-width: 768px)
+    padding: 40px
+    font-size: 1.1rem
+
+// Новые стили для авторизации
+.auth-gate
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 50vh
+  width: 100%
+
+  &__box
+    background-color: $color-bg-card
+    border: 1px solid $color-border
+    border-radius: 8px
+    padding: 24px
+    max-width: 400px
+    width: 100%
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+    text-align: center
+
+  &__title
+    font-size: 1.4rem
+    font-weight: 600
+    color: $color-text-main
+    margin-bottom: 8px
+
+  &__subtitle
+    font-size: 0.95rem
+    color: $color-text-muted
+    margin-bottom: 20px
+    line-height: 1.4
+
+  &__form
+    display: flex
+    flex-direction: column
+    gap: 12px
+
+  &__input
+    width: 100%
+    padding: 12px 16px
+    border: 1px solid $color-border
+    border-radius: 6px
+    font-size: 1rem
+    outline: none
+    transition: border-color 0.2s
+    box-sizing: border-box
+
+    &:focus
+      border-color: $color-primary
+
+  &__btn
+    background-color: $color-primary
+    color: #ffffff
+    border: none
+    border-radius: 6px
+    padding: 12px
+    font-size: 1rem
+    font-weight: 600
+    cursor: pointer
+    transition: background-color 0.2s
+
+    &:hover
+      background-color: $color-primary-hover
+
+// Вспомогательный класс для скрытия
+.u-hidden
+  display: none !important
+
+.tab-nav
+  display: flex
+  gap: 8px
+  border-bottom: 2px solid $color-border
+  margin-bottom: 24px
+  overflow-x: auto
+  white-space: nowrap
+  -webkit-overflow-scrolling: touch
+
+  &::-webkit-scrollbar
+    display: none
+
+  &__btn
+    background: transparent
+    border: none
+    padding: 12px 24px
+    font-size: 1rem
+    font-weight: 600
+    color: $color-text-muted
+    cursor: pointer
+    border-bottom: 2px solid transparent
+    margin-bottom: -2px 
+    transition: all 0.2s ease
+    outline: none
+
+    &:hover
+      color: $color-primary
+
+    &--active
+      color: $color-primary
+      border-bottom-color: $color-primary
+
+// Базовый класс для содержимого вкладок
+.tab-content
+  width: 100%
+
+// Модификатор для карточки покупки (опционально, чтобы визуально отличать)
+.feedback-card--purchase
+  border-left: 4px solid #28a745 // Зеленая полоса слева для отличия покупок
+
+// Предыдущий вспомогательный класс скрытия
+.u-hidden
+  display: none !important
+.feedback-card
+  // ... ваши старые стили карточки ...
+
+  &__img-preview
+    width: 100%
+    height: 140px // Фиксированная высота для сохранения ровной сетки карточек
+    margin-bottom: 16px
+    background-color: #f7f9fc
+    border-radius: 6px
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid $color-border
+
+    img
+      max-width: 100%
+      max-height: 100%
+      object-fit: contain // Сохраняет пропорции компрессора, не растягивая его
+      padding: 8px

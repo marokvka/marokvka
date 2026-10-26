@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список заявок — АС Техник</title>
+    <link rel="stylesheet" href="src/css/normolize.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css.map">
+</head>
+<body class="page">
+
+    <main class="main-content">
+        <section class="info-page">
+            <div class="container">
+                
+                <!-- Экран авторизации -->
+                <div class="auth-gate" id="auth-gate">
+                    <div class="auth-gate__box">
+                        <h2 class="auth-gate__title">Доступ ограничен</h2>
+                        <p class="auth-gate__subtitle">Для просмотра списков заявок введите пароль администратора.</p>
+                        <form class="auth-gate__form" id="auth-form">
+                            <input class="auth-gate__input" type="password" id="auth-password" required placeholder="Введите пароль">
+                            <button class="auth-gate__btn" type="submit">Войти</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Основной защищенный контент -->
+                <div class="protected-content u-hidden" id="protected-content">
+                    <nav class="breadcrumbs">
+                        <a href="index.html" class="breadcrumbs__link">Главная</a>
+                        <span class="breadcrumbs__separator">/</span>
+                        <span class="breadcrumbs__current">Панель заявок</span>
+                    </nav>
+
+                    <div class="info-page__wrapper">
+                        <h1 class="info-page__title">Панель управления</h1>
+                        <p class="info-page__subtitle">Управление обращениями и заказами клиентов компании.</p>
+                        
+                        <!-- Переключатели блоков (Табы) -->
+                        <div class="tab-nav">
+                            <button class="tab-nav__btn tab-nav__btn--active" data-tab="feedback">
+                                Обратная связь
+                            </button>
+                            <button class="tab-nav__btn" data-tab="purchase">
+                                Заявки на покупку
+                            </button>
+                        </div>
+
+                        <!-- Блок 1: Обратная связь -->
+                        <div class="tab-content" id="tab-feedback">
+                            <div class="feedback-cards-grid" id="feedback-container">
+                                <!-- JS подставит карточки обратной связи -->
+                            </div>
+                        </div>
+
+                        <!-- Блок 2: Заявки на покупку -->
+                        <div class="tab-content u-hidden" id="tab-purchase">
+                            <div class="feedback-cards-grid" id="purchase-container">
+                                <!-- JS подставит карточки покупок -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+   
+    <script src="src/javascript/requests.js"></script>
+</body>
+</html>

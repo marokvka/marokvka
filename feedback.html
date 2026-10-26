@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь — АС Техник</title>
+    <link rel="stylesheet" href="src/css/normolize.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css.map">
+    
+</head>
+<body class="page">
+
+    <main class="main-content">
+        <section class="info-page">
+            <div class="container">
+                
+                <nav class="breadcrumbs">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                    
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__current">Обратная связь</span>
+                    <span class="breadcrumbs__separator">/</span>
+                    <a href="request.html" class="breadcrumbs__next">Список заявок</a>
+                    
+                </nav>
+                
+
+                <div class="info-page__wrapper info-page__wrapper--narrow">
+                    <h1 class="info-page__title">Обратная связь</h1>
+                    <p class="info-page__subtitle">Оставьте ваши контакты, и наш специалист свяжется с вами в ближайшее время.</p>
+                    
+                    <form class="feedback-page-form">
+                        <div class="feedback-page-form__group">
+                            <label class="feedback-page-form__label" for="page-name">Ваше имя *</label>
+                            <input class="feedback-page-form__input" type="text" id="page-name" required placeholder="Иван Иванов">
+                        </div>
+                        
+                        <div class="feedback-page-form__group">
+                            <label class="feedback-page-form__label" for="page-phone">Номер телефона *</label>
+                            <input class="feedback-page-form__input" type="tel" id="page-phone" required placeholder="+7 (999) 000-00-00">
+                        </div>
+                        
+                        <div class="feedback-page-form__group">
+                            <label class="feedback-page-form__label" for="page-message">Сообщение</label>
+                            <textarea class="feedback-page-form__input feedback-page-form__input--textarea" id="page-message" placeholder="Какой у вас вопрос?"></textarea>
+                        </div>
+                        
+                        <button class="button button--primary feedback-page-form__btn" type="submit">Отправить заявку</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="src/javascript/feedback.js"></script>
+</body>
+</html>
